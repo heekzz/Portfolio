@@ -1,0 +1,158 @@
+/*
+* Start Bootstrap - One Page Wonder (http://startbootstrap.com/)
+* Copyright 2013-2016 Start Bootstrap
+* Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+*/
+
+body {
+    margin-top: 0px;
+    /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+
+.bookingobject {
+
+}
+
+
+.header-image {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: url('../img/header.png') no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.headline {
+    padding: 120px 0;
+}
+
+.headline h1 {
+    font-family: "Pacifico", cursive;
+    font-size: 130px;
+    color: white;
+    /*background: #fff;
+    background: rgba(255,255,255,0.9);*/
+}
+
+.headline h2 {
+    font-size: 77px;
+    background: #fff;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.featurette-divider {
+    margin: 80px 0;
+}
+
+.featurette {
+    overflow: hidden;
+}
+
+.featurette-image.pull-left {
+    margin-right: 40px;
+}
+
+.featurette-image.pull-right {
+    margin-left: 40px;
+}
+
+.featurette-heading {
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+.featurette-heading > .text-muted {
+    font-weight: lighter;
+}
+
+.bars-left {
+    margin-top: 30px;
+}
+
+.bars-text {
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.media-divider {
+    margin: 20px 70px 20px 70px;
+}
+
+.media-width {
+    margin: 20px 20px 20px 20px;
+    font-size: 60px;
+}
+
+.reveal {}
+
+footer {
+    margin: 50px 0;
+}
+
+@media(max-width:1200px) {
+    .headline h1 {
+        font-size: 140px;
+    }
+    .headline h2 {
+        font-size: 63px;
+    }
+}
+
+@media(max-width:991px) {
+    .headline h1 {
+        font-size: 105px;
+    }
+    .headline h2 {
+        font-size: 50px;
+    }
+}
+
+@media(max-width:768px) {
+    
+}
+
+@media(max-width:668px) {
+    .headline h1 {
+        font-size: 70px;
+    }
+    .headline h2 {
+        font-size: 32px;
+    }
+}
+
+@media(max-width:640px) {
+    .headline {
+        padding: 75px 0 25px 0;
+    }
+    .headline h1 {
+        font-size: 60px;
+    }
+    .headline h2 {
+        font-size: 30px;
+    }
+    
+    .searchbargroup {
+        margin-bottom: 15px;
+        padding: 0 0 0 0;
+    }
+
+    .searchbar {
+        height: 34px;
+    }
+}
+
+.bars-text-inverted {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.searchbargroup {
+    margin-bottom: 15px;
+    padding: 0 25% 0 25%;
+}
+
+.searchbar {
+    height: 50px;
+}
