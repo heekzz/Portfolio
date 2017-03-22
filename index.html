@@ -33,6 +33,9 @@
     <!-- jQuery UI -->
     <script src="js/jquery-ui.min.js"></script>
 
+    <!-- Handlebars.js -->
+    <script src="js/handlebars.min-latest.js"></script>
+
     <!-- Scrolling -->
     <script src="https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js"></script>
 
@@ -90,7 +93,7 @@
                 <p class="lead">I'm a student at Linköping University currently pursuing a M.Sc. in Large-Scale Software Development.
                     As a person I would describe me as engaged, hard working and willing to meet new challenges at all time.</p>
                 <p class="lead">I'm currently looking to develop my skills in the area of software development.
-                   I am always eager for new knowledge and becoming better at the things I have a passion about.</p>
+                    I am always eager for new knowledge and becoming better at the things I have a passion about.</p>
             </div>
 
             <hr class="featurette-divider">
@@ -396,6 +399,54 @@
         <!-- Previous work content -->
         <div role="tabpanel" class="tab-pane fade" id="previous-work">
             <h1>Previous work!</h1>
+            <p class="lead">Here are some previous project I have produced and participated in.</p>
+            <div id="github-placeholder"></div>
+
+            <hr>
+
+            <h2>Hackathons <small><a class="expand" data-target="#hackathons-collapse">show</a></small></h2>
+            <div class="row collapse" id="hackathons-collapse">
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="thumbnail">
+                        <img src="img/how_2015.png" alt="...">
+                        <div class="caption">
+                            <h3>Hack Out West 2015</h3>
+                            <p>...</p>
+                            <p><a href="https://hackoutwest.splashthat.com/" class="btn btn-primary" role="button">More info</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="thumbnail">
+                        <img src="img/ESH_2015_.jpg" alt="...">
+                        <div class="caption">
+                            <h3>East Sweden Hack 2015</h3>
+                            <p>...</p>
+                            <p><a href="#" class="btn btn-primary" role="button">More info</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="thumbnail">
+                        <img src="img/how_2016.PNG" alt="...">
+                        <div class="caption">
+                            <h3>Hack Out West 2016</h3>
+                            <p>...</p>
+                            <p><a href="https://hackoutwest2016.splashthat.com/" class="btn btn-primary" role="button">More info</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="thumbnail">
+                        <img src="img/ESH_2015_.jpg" alt="...">
+                        <div class="caption">
+                            <h3>East Sweden Hack 2016</h3>
+                            <p>...</p>
+                            <p><a href="#" class="btn btn-primary" role="button">More info</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <!-- / Previous work pane -->
 
@@ -460,7 +511,29 @@
     </div>
 </footer>
 
-
+<script id="github-template" type="text/x-handlebars-template">
+    <h2>GitHub <small><a class="expand" data-target="#github-collapse">show</a></small></h2>
+    <div class="collapse" id="github-collapse">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th><strong>Name</strong></th>
+                    <th><strong>Description</strong></th>
+                    <th><strong>Link to repo</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+            {{#each repos}}
+            <tr>
+                <th class="col-xs-3">{{name}}</th>
+                <th class="col-xs-7">{{description}}</th>
+                <th class="col-xs-2"><a  href="{{html_url}}">Link</a></th>
+            </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    </div>
+</script>
 <script src="js/script.js"></script>
 </body>
 
