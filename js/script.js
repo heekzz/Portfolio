@@ -29,28 +29,21 @@ $("#github-placeholder").html(template());
 var repositories = [];
 $.ajax({
     url: "https:/api.github.com/users/heekzz/repos",
-    async: false,
     success: function (response) {
-        for (var i = 0; i < response.length; i++) {
-            var repo = {
-                name: response[i].name,
-                description: response[i].description,
-                html_url: response[i].html_url
-            };
-            repositories.push(repo);
-        }
-        var context = {repos: repositories};
+        var context = {repos: response};
         var html = template(context);
         $("#github-placeholder").html(html);
-    }
-});
+    },
+    done: function (response) {
+        $(".expand").click(function (e) {
+            var target = $(this).data("target");
+            if ($(target).is(":visible")) {
+                $(this).html("show")
+            } else {
+                $(this).html("hide")
+            }
+            $(target).collapse("toggle");
+        });
 
-$(".expand").click(function (e) {
-    var target = $(this).data("target");
-    if ($(target).is(":visible")) {
-        $(this).html("show")
-    } else {
-        $(this).html("hide")
     }
-    $(target).collapse("toggle");
 });
