@@ -18,32 +18,30 @@ $('.nav a').on('click', function(){
     $('.navbar-collapse').collapse('hide')
 });
 
+// Show and hide tabs in "Previous work" page
+$(".expand").click(function (e) {
+    var target = $(this).data("target");
+    if ($(target).is(":visible")) {
+        $(this).html("show")
+    } else {
+        $(this).html("hide")
+    }
+    $(target).collapse("toggle");
+});
 
 
-
-
-// GitHub -- WARNING: SYNCHRONOUS!!
+// GitHub
 var source = $("#github-template").html();
 var template = Handlebars.compile(source);
 $("#github-placeholder").html(template());
-var repositories = [];
+
 $.ajax({
     url: "https:/api.github.com/users/heekzz/repos",
     success: function (response) {
         var context = {repos: response};
         var html = template(context);
         $("#github-placeholder").html(html);
-    },
-    done: function (response) {
-        $(".expand").click(function (e) {
-            var target = $(this).data("target");
-            if ($(target).is(":visible")) {
-                $(this).html("show")
-            } else {
-                $(this).html("hide")
-            }
-            $(target).collapse("toggle");
-        });
 
     }
 });
+

@@ -400,7 +400,10 @@
         <div role="tabpanel" class="tab-pane fade" id="previous-work">
             <h1>Previous work!</h1>
             <p class="lead">Here are some previous project I have produced and participated in.</p>
-            <div id="github-placeholder"></div>
+            <h2>GitHub <small><a class="expand" data-target="#github-collapse">show</a></small></h2>
+            <div class="collapse" id="github-collapse">
+                <div id="github-placeholder"></div>
+            </div>
 
             <hr>
 
@@ -512,27 +515,24 @@
 </footer>
 
 <script id="github-template" type="text/x-handlebars-template">
-    <h2>GitHub <small><a class="expand" data-target="#github-collapse">show</a></small></h2>
-    <div class="collapse" id="github-collapse">
-        <table class="table table-hover">
-            <thead>
-                <tr>
-                    <th><strong>Name</strong></th>
-                    <th><strong>Description</strong></th>
-                    <th><strong>Link to repo</strong></th>
-                </tr>
-            </thead>
-            <tbody>
-            {{#each repos}}
-            <tr>
-                <th class="col-xs-3">{{name}}</th>
-                <th class="col-xs-7">{{description}}</th>
-                <th class="col-xs-2"><a  href="{{html_url}}">Link</a></th>
-            </tr>
-            {{/each}}
-            </tbody>
-        </table>
-    </div>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th><strong>Name</strong></th>
+            <th><strong>Description</strong></th>
+            <th><strong>Link to repo</strong></th>
+        </tr>
+        </thead>
+        <tbody>
+        {{#each repos}}
+        <tr>
+            <th class="col-xs-3">{{name}}</th>
+            <th class="col-xs-7">{{description}}</th>
+            <th class="col-xs-2"><a  href="{{html_url}}">Link</a></th>
+        </tr>
+        {{/each}}
+        </tbody>
+    </table>
 </script>
 <script src="js/script.js"></script>
 </body>
